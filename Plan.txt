@@ -1,0 +1,38 @@
+﻿THE PLAN!!!
+
+MVP:
+	ROSTER for 3 sports, with (10?) teams each.
+		Volleyball
+		Soccer
+		Basketball
+	The program must be able to read multiple files filled with the different teams rosters.
+	It also must be able to search and output specific information from each team when called upon in a search.
+	The program will auto generate a tournement schedule based on inputed seeds for each team / or a pool play situation
+
+STRETCH GOALS:
+	1.	Be able to put in information about game play and have it be recorded as a game transcript? 
+				std::cin >> p1 >> p2;
+				cin event, team, p1, p2
+				Sub h 10 13
+				3pt h 13
+	2.	Individual player stat updates by live user input, Positional statistics.
+	3.	Visual Volleyball court tracking
+			 ____________________
+			|      |      |      |
+			|  02  |  19  |  06  |
+			|------|------|------|
+			|  08  |  12  |  07  |
+			======================
+			|  99  |  13  |  02  |
+			|------|------|------|
+			|  12  |  04  |  03  |
+			|______|______|______|
+
+	4.	MVP for team and tournement, positional calculations
+	5.	Option to move players from one team roster to another (trading)
+	6.	On V.S. Off court tracking and live display
+
+IDIOTIC STRETCHES:
+	1. MAKE A VISUAL BASKETBALL TRACKING
+
+
