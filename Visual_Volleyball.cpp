@@ -85,4 +85,7 @@ void seperate_int() {
 
 	std::cout << n1 << std::endl;
 	std::cout << n2 << std::endl;
-}\gS
+}
+
+//My COMPUTER FORKING SUCKS SO MUCH.
+adkfjafas; lfjkas;lfjk
