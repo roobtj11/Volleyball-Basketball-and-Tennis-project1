@@ -15,14 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Visual_Volleyball.cpp">
+    <Text Include="Plan.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Volleyball\Visual_Volleyball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Plan.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Roster 1.csv" />
+    <None Include="Volleyball\Rosters\Team1.csv" />
+    <None Include="Volleyball\Rosters\Team2.csv" />
   </ItemGroup>
 </Project>

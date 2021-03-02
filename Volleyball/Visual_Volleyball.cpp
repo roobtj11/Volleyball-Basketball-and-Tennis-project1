@@ -1,17 +1,69 @@
-#include <iostream>;
-#include <string>;
-const long int num_rows = 10;
-const long int num_cols = 22;
-const int vball_num_side = 6;
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <sstream>
 
-void vball_visual(std::string home_number[]);
-void get_vball_home_roster(std::string vball_home_number_roster[]);
+const int num_per_roster = 12;
+std::vector <std::string> Player_Name;
+const int vball_num_side = 6;
+void vball_visual();
+void Get_Teams(std::string&, std::string&);
+void get_vball_rosters(std::string, std::string, std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[],std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
+
+void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
+
+	std::string PATH;
+	PATH = "Volleyball\\Rosters\\" + filename + ".csv";
+
+	std::ifstream stream;
+	stream.open(PATH);
+
+	//Skip the first line
+	std::string line;
+	std::getline(stream, line);
+
+	//Read every line in the file
+	for (int i = 0; i < num_per_roster; i++){
+		std::stringstream ss(line);
+		std::string substr;
+
+		//Read the name
+		std::string name;
+		std::getline(ss, name, ',');
+		Names[i] = name;
+
+		//Read the number
+		std::string number;
+		std::getline(ss, number, ',');
+		int num = std::stoi(number);
+		if (num < 10) { Numbers[i] = "0" + num; }
+		else { Numbers[i] = number; }
+
+		//Read the position
+		std::string position;
+		std::getline(ss, position, ',');
+		Positions[i] = position;
+
+		std::cout << Names[i] << "\t" << Numbers[i] << "\t" << Positions[i] << std::endl;
+	}
+	stream.close();
+}
 
 int main() {
 
-	std::string volleyball_home_number_roster[vball_num_side];
-	get_vball_home_roster(volleyball_home_number_roster);
-	vball_visual(volleyball_home_number_roster);
+	std::string home, away;
+
+	std::string Volleyball_Home_Names[num_per_roster];
+	std::string Volleyball_Home_Numbers[num_per_roster];
+	std::string Volleyball_Home_Positions[num_per_roster];
+	std::string Volleyball_Away_Names[num_per_roster];
+	std::string Volleyball_away_Numbers[num_per_roster];
+	std::string Volleyball_Away_Positions[num_per_roster];
+
+	Get_Teams(home, away);
+	get_vball_rosters(home, away, Volleyball_Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
+	vball_visual();
 
 
 	std::cout << "press enter to end.";
@@ -21,7 +73,14 @@ int main() {
 	return 0;
 }
 
-void vball_visual(std::string volleyball_home_number_roster[]) {
+void Get_Teams(std::string& home, std::string& away) {
+	std::cout << "What is the home team's name? (Input as seen on roster)" << std::endl;
+	std::getline(std::cin, home);
+	std::cout << "What is the away team's name? (Input as seen on roster)" << std::endl;
+	std::getline(std::cin, away);
+}
+
+void vball_visual() {
 	std::string hpos1 = "01";
 	std::string hpos2 = "02";
 	std::string hpos3 = "03";
@@ -60,29 +119,23 @@ void vball_visual(std::string volleyball_home_number_roster[]) {
 			|______|______|______|
 */
 
-void get_vball_home_roster(std::string vball_home_number_roster[]) {
-	vball_home_number_roster[0] = "01";
-	vball_home_number_roster[1] = "02";
-	vball_home_number_roster[2] = "03";
-	vball_home_number_roster[3] = "04";
-	vball_home_number_roster[4] = "05";
-	vball_home_number_roster[5] = "06";
-}
+void get_vball_rosters(std::string home, std::string away,std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]) {
+	std::cout << "Reading home team roster... " << std::endl;
+	try {
+		read_data_from_file(home, Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions);
+		std::cout << "Success!" << std::endl;
+	}
+	catch (...) {
+		std::cout << "Failed!" << std::endl;
+		std::exit(1);
+	}
 
-void seperate_int() {
-	std::cout << "Enter an integer " << std::endl;
-	int number;
-	number = 13;
-
-	//convert the number into digits
-	//lets say the number is 12345, of course this would require 5 variables, 
-
-	int n1, n2;
-
-	n1 = number % 10;
-	number /= 10;
-	n2 = number % 10;
-
-	std::cout << n1 << std::endl;
-	std::cout << n2 << std::endl;
+	try {
+		read_data_from_file(away, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
+		std::cout << "Success!" << std::endl;
+	}
+	catch (...) {
+		std::cout << "Failed!" << std::endl;
+		std::exit(1);
+	}
 }

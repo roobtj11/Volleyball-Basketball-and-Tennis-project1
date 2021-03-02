@@ -139,13 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Visual_Volleyball.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="Plan.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Roster 1.csv" />
+    <None Include="Volleyball\Rosters\Team1.csv" />
+    <None Include="Volleyball\Rosters\Team2.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
