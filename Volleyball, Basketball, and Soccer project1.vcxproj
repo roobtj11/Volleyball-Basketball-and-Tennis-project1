@@ -24,6 +24,7 @@
     <ProjectGuid>{42c32f5f-254a-4ca6-a4a6-dbfd9c4d1fbf}</ProjectGuid>
     <RootNamespace>VolleyballBasketballandSoccerproject1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Volleyball, Basketball, and Tennis project1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -146,7 +147,7 @@
     <None Include="Volleyball\Rosters\Team2.csv" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
+    <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
