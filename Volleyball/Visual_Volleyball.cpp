@@ -10,90 +10,9 @@ const int Num_Per_Side = 6;
 void vball_visual(std::string Home_Lineup[][Num_Per_Side], std::string Away_Lineup[][Num_Per_Side]);
 void Get_Teams(std::string&, std::string&);
 void get_vball_rosters(std::string, std::string, std::string Volleyball_Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[],std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
-
-void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
-
-	std::string PATH;
-	PATH = "Volleyball\\Rosters\\" + filename + ".csv"; 
-	std::cout << PATH;
-	std::ifstream stream;
-	stream.open(PATH);
-
-	//Skip the first line
-	std::string line;
-	std::getline(stream, line);
-	std::cout << line << std::endl;
-
-	int i = 0;
-
-	//Read every line in the file
-	while(std::getline(stream, line)){
-		std::stringstream ss(line);
-		std::string substr;
-		
-		//Read the name
-		std::string name;
-		std::getline(ss, name, ',');
-		Names[i] = name;
-		
-
-		//Read the number
-		std::getline(ss, substr, ',');
-		int num = std::stoi(substr);
-		if (num<10){ substr = "0" + std::to_string(num);}
-		Numbers[i] = substr;
-			
-
-		//Read the position
-		std::string position;
-		std::getline(ss, position, ',');
-		Positions[i] = position;
-
-		i++;
-	}
-	stream.close();
-}
-
-void On_Court(std::string team, std::string Names[], std::string Numbers[], std::string Positions[], std::string Lineup[][Num_Per_Side]) {
-	std::cout << "Here is the roster for " << team << ":" << std::endl << std::endl;
-	for (int i = 0; i < Num_Per_Roster; i++) {
-		std::cout << Names[i] << "\t" << Numbers[i] << "\t" << Positions[i] << std::endl;
-	}
-	std::cout << std::endl << std::endl;
-
-	for (int i = 0; i < Num_Per_Side; i++) {
-		std::cout << "Who is in position " << i + 1 << "? Enter their number:\t";
-		std::string number;
-		std::getline(std::cin, number);
-		for (int p = 0; p < Num_Per_Roster; p++) {
-			if (Numbers[p] == number) {
-				Lineup[0][p] = Numbers[p];
-			}
-		}
-	}
-}
-
-void Starting_Lineups(std::string home, std::string away, std::string Home_Names[], std::string Home_Numbers[], std::string Home_Positions[], std::string Away_Names[], std::string Away_Numbers[], std::string Away_Positions[], std::string Home_Lineup[Num_Per_Side][Num_Per_Side], std::string Away_Lineup[Num_Per_Side][Num_Per_Side]) {
-	try {
-		On_Court(home, Home_Names, Home_Numbers, Home_Positions, Home_Lineup);
-		std::cout << "Success!" << std::endl;
-	}
-	catch (...) {
-		std::cout << "Failed!" << std::endl;
-		std::exit(2);
-	}
-
-	try {
-		On_Court(away, Away_Names, Away_Numbers, Away_Positions, Away_Lineup);
-		std::cout << "Success!" << std::endl;
-	}
-	catch (...) {
-		std::cout << "Failed!" << std::endl;
-		std::exit(2);
-	}
-}
-
-
+void get_vball_rosters(std::string, std::string, std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
+void On_Court(std::string, std::string Names[], std::string Numbers[], std::string Positions[], std::string Lineup[][Num_Per_Side]);
+void Starting_Lineups(std::string, std::string, std::string Home_Names[], std::string Home_Numbers[], std::string Home_Positions[], std::string Away_Names[], std::string Away_Numbers[], std::string Away_Positions[], std::string Home_Lineup[Num_Per_Side][Num_Per_Side], std::string Away_Lineup[Num_Per_Side][Num_Per_Side]);
 
 int main() {
 
@@ -142,18 +61,6 @@ void vball_visual(std::string Home_Lineup[][Num_Per_Side], std::string Away_Line
 	std::cout << "|______|______|______|" << std::endl;
 }
 
-/*
-			 ____________________
-			|      |      |      |
-			|  02  |  19  |  06  |
-			|------|------|------|
-			|  08  |  12  |  07  |
-			======================
-			|  99  |  13  |  02  |
-			|------|------|------|
-			|  12  |  04  |  03  |
-			|______|______|______|
-*/
 
 void get_vball_rosters(std::string home, std::string away,std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]) {
 	std::cout << "Reading home team roster... " << std::endl;
@@ -175,4 +82,86 @@ void get_vball_rosters(std::string home, std::string away,std::string Home_Names
 		std::exit(1);
 	}
 	
+}
+
+void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
+
+	std::string PATH;
+	PATH = "Volleyball\\Rosters\\" + filename + ".csv";
+	std::cout << PATH;
+	std::ifstream stream;
+	stream.open(PATH);
+
+	//Skip the first line
+	std::string line;
+	std::getline(stream, line);
+	std::cout << line << std::endl;
+
+	int i = 0;
+
+	//Read every line in the file
+	while (std::getline(stream, line)) {
+		std::stringstream ss(line);
+		std::string substr;
+
+		//Read the name
+		std::string name;
+		std::getline(ss, name, ',');
+		Names[i] = name;
+
+
+		//Read the number
+		std::getline(ss, substr, ',');
+		int num = std::stoi(substr);
+		if (num < 10) { substr = "0" + std::to_string(num); }
+		Numbers[i] = substr;
+
+
+		//Read the position
+		std::string position;
+		std::getline(ss, position, ',');
+		Positions[i] = position;
+
+		i++;
+	}
+	stream.close();
+}
+
+void On_Court(std::string team, std::string Names[], std::string Numbers[], std::string Positions[], std::string Lineup[][Num_Per_Side]) {
+	std::cout << "Here is the roster for " << team << ":" << std::endl << std::endl;
+	for (int i = 0; i < Num_Per_Roster; i++) {
+		std::cout << Names[i] << "\t" << Numbers[i] << "\t" << Positions[i] << std::endl;
+	}
+	std::cout << std::endl << std::endl;
+
+	for (int i = 0; i < Num_Per_Side; i++) {
+		std::cout << "Who is in position " << i + 1 << "? Enter their number:\t";
+		std::string number;
+		std::getline(std::cin, number);
+		for (int p = 0; p < Num_Per_Roster; p++) {
+			if (Numbers[p] == number) {
+				Lineup[0][p] = Numbers[p];
+			}
+		}
+	}
+}
+
+void Starting_Lineups(std::string home, std::string away, std::string Home_Names[], std::string Home_Numbers[], std::string Home_Positions[], std::string Away_Names[], std::string Away_Numbers[], std::string Away_Positions[], std::string Home_Lineup[Num_Per_Side][Num_Per_Side], std::string Away_Lineup[Num_Per_Side][Num_Per_Side]) {
+	try {
+		On_Court(home, Home_Names, Home_Numbers, Home_Positions, Home_Lineup);
+		std::cout << "Success!" << std::endl;
+	}
+	catch (...) {
+		std::cout << "Failed!" << std::endl;
+		std::exit(2);
+	}
+
+	try {
+		On_Court(away, Away_Names, Away_Numbers, Away_Positions, Away_Lineup);
+		std::cout << "Success!" << std::endl;
+	}
+	catch (...) {
+		std::cout << "Failed!" << std::endl;
+		std::exit(2);
+	}
 }
