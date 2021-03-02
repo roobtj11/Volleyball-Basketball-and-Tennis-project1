@@ -23,7 +23,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Volleyball\Rosters\Team1.csv" />
-    <None Include="Volleyball\Rosters\Team2.csv" />
+    <None Include="Volleyball\Rosters\MVP.csv" />
+    <None Include="Volleyball\Rosters\EPIC.csv" />
+    <None Include="Volleyball\Rosters\Spike.csv" />
+    <None Include="Volleyball\Rosters\MVC.csv" />
   </ItemGroup>
 </Project>
