@@ -20,11 +20,11 @@ void vball_visual(std::string Home_Lineup[], std::string Away_Lineup[]) {
 	std::cout << " ____________________ " << std::endl;
 	std::cout << "|      |      |      |" << std::endl;
 	std::cout << "|  " << Home_Lineup[0] << "  |  " << Home_Lineup[5] << "  |  " << Home_Lineup[4] << "  |" << std::endl;
-	std::cout << "|------|------|------|" << std::endl;
+	std::cout << "|------|------|------|\t HOME" << std::endl;
 	std::cout << "|  " << Home_Lineup[1] << "  |  " << Home_Lineup[2] << "  |  " << Home_Lineup[3] << "  |" << std::endl;
 	std::cout << "======================" << std::endl;
 	std::cout << "|  " << Away_Lineup[3] << "  |  " << Away_Lineup[2] << "  |  " << Away_Lineup[1] << "  |" << std::endl;
-	std::cout << "|------|------|------|" << std::endl;
+	std::cout << "|------|------|------|\t AWAY" << std::endl;
 	std::cout << "|  " << Away_Lineup[4] << "  |  " << Away_Lineup[5] << "  |  " << Away_Lineup[0] << "  |" << std::endl;
 	std::cout << "|______|______|______|" << std::endl;
 }

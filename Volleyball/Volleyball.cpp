@@ -12,14 +12,14 @@ int Volleyball_Menu();
 int main() {
 
 	std::cout << "Welcome to the Volleyball section of our app!" << std::endl;
-
-	if (Volleyball_Menu() == 1) {
-
-	}
-	else if (Volleyball_Menu() == 2) {
+	int m = Volleyball_Menu();
+	if (m == 1) {
 
 	}
-	else if (Volleyball_Menu() == 3) {
+	else if (m == 2) {
+
+	}
+	else if (m == 3) {
 		Visual_Court();
 	}
 
@@ -56,4 +56,5 @@ void Visual_Court() {
 	get_vball_rosters(home, away, Volleyball_Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
 	Starting_Lineups(home, away, Volleyball_Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions, Home_Lineup, Away_Lineup);
 	vball_visual(Home_Lineup, Away_Lineup);
+	std::exit(1);
 }
