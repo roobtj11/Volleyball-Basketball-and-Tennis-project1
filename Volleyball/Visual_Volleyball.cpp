@@ -5,16 +5,16 @@
 #include <sstream>
 
 const int num_per_roster = 12;
-std::vector <std::string> Player_Name;
+
 const int vball_num_side = 6;
 void vball_visual();
 void Get_Teams(std::string&, std::string&);
-void get_vball_rosters(std::string, std::string, std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[],std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
+void get_vball_rosters(std::string, std::string, std::string Volleyball_Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[],std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
 
 void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
 
 	std::string PATH;
-	PATH = "Volleyball\\Rosters\\Team1.csv"; 
+	PATH = "Volleyball\\Rosters\\" + filename + ".csv"; 
 	std::cout << PATH;
 	std::ifstream stream;
 	stream.open(PATH);
@@ -22,23 +22,27 @@ void read_data_from_file(std::string filename, std::string Names[], std::string 
 	//Skip the first line
 	std::string line;
 	std::getline(stream, line);
+	std::cout << line << std::endl;
+
+	int i = 0;
 
 	//Read every line in the file
-	for (int i = 0; i < num_per_roster; i++){
+	while(std::getline(stream, line)){
 		std::stringstream ss(line);
 		std::string substr;
-
+		
 		//Read the name
 		std::string name;
 		std::getline(ss, name, ',');
 		Names[i] = name;
+		
 
 		//Read the number
-		std::string number;
-		std::getline(ss, number, ',');
-		int num = std::stoi(number);
-		if (num < 10) { Numbers[i] = "0" + num; }
-		else { Numbers[i] = number; }
+		std::getline(ss, substr, ',');
+		int num = std::stoi(substr);
+		if (num<10){ substr = "0" + std::to_string(num);}
+		Numbers[i] = substr;
+			
 
 		//Read the position
 		std::string position;
@@ -46,6 +50,7 @@ void read_data_from_file(std::string filename, std::string Names[], std::string 
 		Positions[i] = position;
 
 		std::cout << Names[i] << "\t" << Numbers[i] << "\t" << Positions[i] << std::endl;
+		i++;
 	}
 	stream.close();
 }
@@ -129,7 +134,7 @@ void get_vball_rosters(std::string home, std::string away,std::string Home_Names
 		std::cout << "Failed!" << std::endl;
 		std::exit(1);
 	}
-
+		
 	try {
 		read_data_from_file(away, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
 		std::cout << "Success!" << std::endl;
@@ -138,4 +143,5 @@ void get_vball_rosters(std::string home, std::string away,std::string Home_Names
 		std::cout << "Failed!" << std::endl;
 		std::exit(1);
 	}
+	
 }
