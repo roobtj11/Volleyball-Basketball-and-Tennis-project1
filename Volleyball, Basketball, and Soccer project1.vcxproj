@@ -143,13 +143,17 @@
     <Text Include="Plan.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Volleyball\Rosters\MVC.csv" />
-    <None Include="Volleyball\Rosters\Spike.csv" />
-    <None Include="Volleyball\Rosters\MVP.csv" />
-    <None Include="Volleyball\Rosters\EPIC.csv" />
+    <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
+    <ClCompile Include="Volleyball\Volleyball.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
+    <None Include="Volleyball\Rosters\EPIC.csv" />
+    <None Include="Volleyball\Rosters\MVC.csv" />
+    <None Include="Volleyball\Rosters\MVP.csv" />
+    <None Include="Volleyball\Rosters\Spike.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Volleyball\Volleyball.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,37 +3,10 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include "Volleyball.h"
 
-const int Num_Per_Roster = 12;
-const int Num_Per_Side = 6;
 
-void Get_Teams(std::string&, std::string&);
-void get_vball_rosters(std::string, std::string, std::string Volleyball_Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
-void vball_visual(std::string Home_Lineup[], std::string Away_Lineup[]);
-void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]);
-void On_Court(std::string, std::string Names[], std::string Numbers[], std::string Positions[], std::string Lineup[]);
-void Starting_Lineups(std::string, std::string, std::string Home_Names[], std::string Home_Numbers[], std::string Home_Positions[], std::string Away_Names[], std::string Away_Numbers[], std::string Away_Positions[], std::string Home_Lineup[], std::string Away_Lineup[]);
 
-int main() {
-
-	std::string home, away;
-
-	std::string Volleyball_Home_Names[Num_Per_Roster];
-	std::string Volleyball_Home_Numbers[Num_Per_Roster];
-	std::string Volleyball_Home_Positions[Num_Per_Roster];
-	std::string Volleyball_Away_Names[Num_Per_Roster];
-	std::string Volleyball_away_Numbers[Num_Per_Roster];
-	std::string Volleyball_Away_Positions[Num_Per_Roster];
-	std::string Home_Lineup[Num_Per_Side];
-	std::string Away_Lineup[Num_Per_Side];
-
-	Get_Teams(home, away);
-	get_vball_rosters(home, away, Volleyball_Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
-	Starting_Lineups(home, away, Volleyball_Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions, Home_Lineup, Away_Lineup);
-	vball_visual(Home_Lineup, Away_Lineup);	
-
-	return 0;
-}
 
 void Get_Teams(std::string& home, std::string& away) {
 	std::cout << "What is the home team's name? (Input as seen on roster)" << std::endl;
@@ -56,7 +29,7 @@ void vball_visual(std::string Home_Lineup[], std::string Away_Lineup[]) {
 	std::cout << "|______|______|______|" << std::endl;
 }
 
-void get_vball_rosters(std::string home, std::string away,std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]) {
+void get_vball_rosters(std::string home, std::string away, std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]) {
 	std::cout << "Reading home team roster... " << std::endl;
 	try {
 		read_data_from_file(home, Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions);
@@ -66,7 +39,7 @@ void get_vball_rosters(std::string home, std::string away,std::string Home_Names
 		std::cout << "Failed!" << std::endl;
 		std::exit(1);
 	}
-		
+
 	try {
 		read_data_from_file(away, Volleyball_Away_Names, Volleyball_away_Numbers, Volleyball_Away_Positions);
 		std::cout << "Success!" << std::endl;
@@ -75,7 +48,7 @@ void get_vball_rosters(std::string home, std::string away,std::string Home_Names
 		std::cout << "Failed!" << std::endl;
 		std::exit(1);
 	}
-	
+
 }
 
 void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
