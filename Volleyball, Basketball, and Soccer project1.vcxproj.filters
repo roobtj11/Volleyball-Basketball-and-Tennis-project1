@@ -18,7 +18,7 @@
     <Text Include="Plan.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="Volleyball\Visual_Volleyball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

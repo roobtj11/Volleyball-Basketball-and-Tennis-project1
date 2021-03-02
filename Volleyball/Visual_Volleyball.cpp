@@ -14,8 +14,8 @@ void get_vball_rosters(std::string, std::string, std::string Home_Names[], std::
 void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
 
 	std::string PATH;
-	PATH = "Volleyball\\Rosters\\" + filename + ".csv";
-
+	PATH = "Volleyball\\Rosters\\Team1.csv"; 
+	std::cout << PATH;
 	std::ifstream stream;
 	stream.open(PATH);
 
