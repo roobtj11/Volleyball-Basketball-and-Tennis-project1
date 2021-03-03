@@ -12,5 +12,6 @@
 
 int Basketball_Tournament()
 {
-	
+	get_bball_rosters();
+
 }
