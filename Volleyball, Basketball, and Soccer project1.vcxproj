@@ -141,8 +141,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="Plan.txt" />
+    <Text Include="structure.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Volleyball\Record Game.cpp" />
     <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
     <ClCompile Include="Volleyball\Volleyball.cpp" />
   </ItemGroup>

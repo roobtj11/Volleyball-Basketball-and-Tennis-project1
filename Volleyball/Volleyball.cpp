@@ -32,7 +32,8 @@ int Volleyball_Menu() {
 		<< "2.\tTournement Schedule" << std::endl
 		<< "3.\tGame View" << std::endl
 		<< "4.\tGame Recording" << std::endl
-		<< "5.\tGame Transcript" << std::endl;
+		<< "5.\tGame Transcript" << std::endl
+		<< "Input the refrence number to the section you want:" << std::endl;
 	std::string SelectionStr;
 	std::getline(std::cin, SelectionStr);
 	int Selection = std::stoi(SelectionStr);

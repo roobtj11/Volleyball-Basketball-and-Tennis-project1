@@ -16,12 +16,16 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Plan.txt" />
+    <Text Include="structure.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Volleyball\Visual_Volleyball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Volleyball\Volleyball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Volleyball\Record Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

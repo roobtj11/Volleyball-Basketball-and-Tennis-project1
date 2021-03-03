@@ -1,0 +1,31 @@
+vector players;
+
+while (std::getline(stream, line)) {
+		std::stringstream ss(line);
+		std::string substr;
+
+		//Read the name
+		std::string name;
+		std::getline(ss, name, ',');
+		Names[i] = name;
+
+
+		//Read the number
+		std::getline(ss, substr, ',');
+		int num = std::stoi(substr);
+		if (num < 10) { substr = "0" + std::to_string(num); }
+		Numbers[i] = substr;
+
+
+		//Read the position
+		std::string position;
+		std::getline(ss, position, ',');
+		Positions[i] = position;
+
+		players[i] =  player(Names[i],Numbers[i],Positions[i]);
+
+		i++;
+	}
+
+Player james = players[2];
+teams epic = new (players, kills, errors, ace, missed serve, digs, assists)
