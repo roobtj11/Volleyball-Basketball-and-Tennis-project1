@@ -3,13 +3,14 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include "Menus.h"
 
 void Startup_Script() {
-	std::cout << "               Welcome to the" << std::endl;
-	std::cout << "               SPORTS MACHINE" << std::endl;
-	std::cout << "     Made by: Tyler Roob and Jack Schnor" << std::endl;
-
-	std::cout << "This program will let you, Keep track of team rosters for - Volleyball, Basketball, and Tennis\n ";
+	std::cout << "                       Welcome to the" << std::endl;
+	std::cout << "                       SPORTS MACHINE" << std::endl;
+	std::cout << "             Made by: Tyler Roob and Jack Schnor" << std::endl;
+	std::cout << "- This program will let you, Keep track of team rosters for -" << std::endl 
+			  << "              Volleyball, Basketball, and Tennis\n " << std::endl << std::endl;
 }
 
 std::string Sport_Select(std::string sport) {
@@ -27,7 +28,7 @@ void Menu_Direct(std::string choice)
 	}
 	else if (choice == "Volleyball")
 	{
-
+		Volleyball_Menu();
 	}
 	else if (choice == "Tennis")
 	{

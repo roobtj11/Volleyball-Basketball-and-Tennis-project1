@@ -28,6 +28,9 @@
     <ClCompile Include="Volleyball\Record Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Volleyball\Rosters\MVC.csv" />
@@ -37,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Volleyball\Volleyball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

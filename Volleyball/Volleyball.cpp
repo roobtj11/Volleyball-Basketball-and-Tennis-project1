@@ -7,26 +7,9 @@
 
 void Visual_Court();
 
-int Volleyball_Menu();
-
-int main() {
-
-	std::cout << "Welcome to the Volleyball section of our app!" << std::endl;
-	int m = Volleyball_Menu();
-	if (m == 1) {
-
-	}
-	else if (m == 2) {
-
-	}
-	else if (m == 3) {
-		Visual_Court();
-	}
-
-	return 0;
-}
-
 int Volleyball_Menu() {
+	std::cout << "Welcome to the Volleyball section of our app!" << std::endl
+		<< "Here are your sub topic options enter the reference number to go." << std::endl;
 	std::cout
 		<< "1.\tTeam Rosters" << std::endl
 		<< "2.\tTournement Schedule" << std::endl
@@ -38,7 +21,16 @@ int Volleyball_Menu() {
 	std::getline(std::cin, SelectionStr);
 	int Selection = std::stoi(SelectionStr);
 
-	return Selection;
+	if (Selection == 1) {
+
+	}
+	else if (Selection == 2) {
+
+	}
+	else if (Selection == 3) {
+		Visual_Court();
+	}
+	return 0;
 }
 
 void Visual_Court() {
