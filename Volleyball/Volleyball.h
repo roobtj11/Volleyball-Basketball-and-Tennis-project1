@@ -1,6 +1,7 @@
 const int Num_Per_Roster = 12;
 const int Num_Per_Side = 6;
 
+int main();
 void Get_Teams(std::string&, std::string&);
 void get_vball_rosters(std::string, std::string, std::string Volleyball_Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]);
 void vball_visual(std::string Home_Lineup[], std::string Away_Lineup[]);

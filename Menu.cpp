@@ -24,7 +24,7 @@ void Menu_Direct(std::string choice)
 {
 	if (choice == "Basketball")
 	{
-		
+		Basketball_Menu();
 	}
 	else if (choice == "Volleyball")
 	{
@@ -32,7 +32,7 @@ void Menu_Direct(std::string choice)
 	}
 	else if (choice == "Tennis")
 	{
-
+		Tennis_Menu();
 	}
 }
 

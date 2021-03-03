@@ -31,6 +31,12 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tennis\Tennis Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Basketball\Basketball Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Volleyball\Rosters\MVC.csv" />
@@ -43,6 +49,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tennis\Tennis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Basketball\Basketball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

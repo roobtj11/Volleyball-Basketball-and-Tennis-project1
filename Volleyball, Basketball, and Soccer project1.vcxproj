@@ -144,7 +144,9 @@
     <Text Include="structure.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Basketball\Basketball Menu.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Tennis\Tennis Menu.cpp" />
     <ClCompile Include="Volleyball\Record Game.cpp" />
     <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
     <ClCompile Include="Volleyball\Volleyball.cpp" />
@@ -156,7 +158,9 @@
     <None Include="Volleyball\Rosters\Spike.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Basketball\Basketball.h" />
     <ClInclude Include="Menus.h" />
+    <ClInclude Include="Tennis\Tennis.h" />
     <ClInclude Include="Volleyball\Volleyball.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

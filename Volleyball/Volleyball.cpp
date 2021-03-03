@@ -16,7 +16,7 @@ int Volleyball_Menu() {
 		<< "3.\tGame View" << std::endl
 		<< "4.\tGame Recording" << std::endl
 		<< "5.\tGame Transcript" << std::endl
-		<< "Input the refrence number to the section you want:" << std::endl;
+		<< "6.\tReturn to MAIN MENU\nInput the refrence number to the section you want:\n";
 	std::string SelectionStr;
 	std::getline(std::cin, SelectionStr);
 	int Selection = std::stoi(SelectionStr);
@@ -29,6 +29,15 @@ int Volleyball_Menu() {
 	}
 	else if (Selection == 3) {
 		Visual_Court();
+	}
+	else if (Selection == 4) {
+
+	}
+	else if (Selection == 5) {
+
+	}
+	else if (Selection == 6) {
+		main();
 	}
 	return 0;
 }
