@@ -1,2 +1,4 @@
 #pragma once
 int main();
+int Basketball_Tournament();
+void get_bball_rosters(std::string home, std::string away, std::string Home_Names[], std::string Basketball_Home_Numbers[], std::string Basketball_Home_Positions[], std::string Basketball_Away_Names[], std::string Basketball_away_Numbers[], std::string Basketball_Away_Positions[]);
