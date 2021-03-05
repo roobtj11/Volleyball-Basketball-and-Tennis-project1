@@ -10,3 +10,4 @@ void On_Court(std::string, std::string Names[], std::string Numbers[], std::stri
 void Starting_Lineups(std::string, std::string, std::string Home_Names[], std::string Home_Numbers[], std::string Home_Positions[], std::string Away_Names[], std::string Away_Numbers[], std::string Away_Positions[], std::string Home_Lineup[], std::string Away_Lineup[]);
 
 void Live_Volleyball_Game();
+void Volleyball_Tournament();

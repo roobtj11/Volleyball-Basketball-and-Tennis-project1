@@ -25,7 +25,7 @@ int Volleyball_Menu() {
 
 	}
 	else if (Selection == 2) {
-
+		Volleyball_Tournament();
 	}
 	else if (Selection == 3) {
 		Visual_Court();

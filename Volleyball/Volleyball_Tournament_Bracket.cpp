@@ -1,13 +1,9 @@
 #include <iostream>
-#include <sstream>
-#include <fstream>
 #include <string>
+#include <fstream>
 #include <vector>
-#include "Basketball.h"
-
-
-
-
+#include <sstream>
+#include "Volleyball.h"
 
 void bracket_generator(std::string Teams[8])
 {
@@ -21,7 +17,7 @@ void bracket_generator(std::string Teams[8])
 
 
 
-void Basketball_Tournament()
+void Volleyball_Tournament()
 {
 	std::string Participating_Teams[8];
 	for (int i = 0; i < 8; i++)
