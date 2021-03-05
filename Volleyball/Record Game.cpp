@@ -18,7 +18,7 @@ void Get_Teams(std::string& home, std::string& away) {
 }
 
 void get_vball_rosters(std::string home, std::string away, std::string Home_Names[], std::string Volleyball_Home_Numbers[], std::string Volleyball_Home_Positions[], std::string Volleyball_Away_Names[], std::string Volleyball_away_Numbers[], std::string Volleyball_Away_Positions[]) {
-	std::cout << "Reading home team roster... " << std::endl;
+	std::cout << "Reading home team rosters " << std::endl;
 	try {
 		read_data_from_file(home, Home_Names, Volleyball_Home_Numbers, Volleyball_Home_Positions);
 		std::cout << "Success!" << std::endl;
