@@ -11,12 +11,14 @@
 
 void bracket_generator(std::string Teams[8])
 {
-	std::cout << Teams[0] << "____                    ____" << Teams[1] << std::endl;
-	std::cout << Teams[2] << "____|__              __|____" << Teams[3] << std::endl;
-	std::cout << "           |-----------|          " << std::endl;
-	std::cout << Teams[4] << "____ __              __ ____" << Teams[5] << std::endl;
-	std::cout << Teams[6] << "____|                  |____" << Teams[7] << std::endl;
-
+	std::cout << Teams[0] << "          " << Teams[1] << std::endl;
+	std::cout << "_____          _____" << std::endl;
+	std::cout << "_____|--------|_____" << std::endl;
+	std::cout << Teams[2] << "          " << Teams[3] << std::endl;
+	std::cout << Teams[4] << "          " << Teams[5] << std::endl;
+	std::cout << "_____          _____" << std::endl;
+	std::cout << "_____|--------|_____" << std::endl;
+	std::cout << Teams[6] << "          " << Teams[7] << std::endl;
 }
 
 

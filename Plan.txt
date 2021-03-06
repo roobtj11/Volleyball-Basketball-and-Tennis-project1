@@ -3,7 +3,7 @@
 MVP:
 	ROSTER for 3 sports, with (10?) teams each.
 		Volleyball
-		Soccer
+		Tennis
 		Basketball
 	The program must be able to read multiple files filled with the different teams rosters.
 	It also must be able to search and output specific information from each team when called upon in a search.

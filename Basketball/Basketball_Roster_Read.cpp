@@ -8,7 +8,7 @@
 void get_bball_rosters(std::string home, std::string away, std::string Home_Names[], std::string Basketball_Home_Numbers[], std::string Basketball_Home_Positions[], std::string Basketball_Away_Names[], std::string Basketball_away_Numbers[], std::string Basketball_Away_Positions[]) {
 	std::cout << "Reading home team roster... " << std::endl;
 	try {
-		read_data_from_file(home, Home_Names, Basketball_Home_Numbers, Basketball_Home_Positions);
+		read_data_from_file_bball(home, Home_Names, Basketball_Home_Numbers, Basketball_Home_Positions);
 		std::cout << "Success!" << std::endl;
 	}
 	catch (...) {
@@ -17,7 +17,7 @@ void get_bball_rosters(std::string home, std::string away, std::string Home_Name
 	}
 
 	try {
-		read_data_from_file(away, Basketball_Away_Names, Basketball_away_Numbers, Basketball_Away_Positions);
+		read_data_from_file_bball(away, Basketball_Away_Names, Basketball_away_Numbers, Basketball_Away_Positions);
 		std::cout << "Success!" << std::endl;
 	}
 	catch (...) {
@@ -27,7 +27,7 @@ void get_bball_rosters(std::string home, std::string away, std::string Home_Name
 
 }
 
-void read_data_from_file(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
+void read_data_from_file_bball(std::string filename, std::string Names[], std::string Numbers[], std::string Positions[]) {
 
 	std::string PATH;
 	PATH = "Basketball\\Rosters\\" + filename + ".csv";
