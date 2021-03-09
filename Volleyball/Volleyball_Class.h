@@ -61,8 +61,6 @@ public:
 
 	void add_Total_Missed_Serves();
 	void add_Game_Missed_Serves();
-
-	
 };
 
 
@@ -80,18 +78,18 @@ void Start_Game();
 
 void get_teams();
 
-int get_serving();
+void get_serving();
 
-void get_lineups();
+void get_lineups(int, std::string Home_Lineup[]);
 
 void Visual_Court();
 
 void Point_Play();
 
-void Home_Team_Rotate();
+void Team_Rotate(std::string lineup[]);
 
-void Away_Team_Rotate();
+void kill_or_error(std::string, int, std::string winning_lineup[], std::string, int, std::string losing_lineup[]) {
 
-void Point_Won_HS();
+void killer(bool);
 
-void Point_Won_AS();
+void Point_Winner();
