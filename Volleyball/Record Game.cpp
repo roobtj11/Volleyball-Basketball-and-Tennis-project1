@@ -95,7 +95,7 @@ void On_Court(std::string team, std::string Names[], std::string Numbers[], std:
 		std::getline(std::cin, number);
 		for (int p = 0; p < Num_Per_Roster; p++) {
 			if (Numbers[p] == number) {
-				Lineup[i] = Numbers[p];
+				Lineup[i] = Numbers[p]; 
 			}
 		}
 	}
