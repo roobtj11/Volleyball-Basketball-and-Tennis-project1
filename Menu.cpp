@@ -38,7 +38,7 @@ void Menu_Direct(std::string choice)
 
 int main() {
 	Startup_Script();
-	std::string selection = "empty";
+	std::string selection;
 	selection = Sport_Select(selection);
 	std::cout << "you chose " << selection << std::endl;
 	Menu_Direct(selection);

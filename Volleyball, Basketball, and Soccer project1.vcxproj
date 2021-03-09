@@ -145,23 +145,39 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Basketball\Basketball Menu.cpp" />
+    <ClCompile Include="Basketball\Basketball_Roster_Info.cpp" />
+    <ClCompile Include="Basketball\Basketball_Roster_Read.cpp" />
+    <ClCompile Include="Basketball\Basketball_Tournament_Bracket.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Tennis\Tennis Menu.cpp" />
-    <ClCompile Include="Volleyball\Record Game.cpp" />
-    <ClCompile Include="Volleyball\Visual_Volleyball.cpp" />
+    <ClCompile Include="Volleyball\Volleyball Bracket.cpp" />
     <ClCompile Include="Volleyball\Volleyball.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Volleyball\Rosters\EPIC.csv" />
-    <None Include="Volleyball\Rosters\MVC.csv" />
-    <None Include="Volleyball\Rosters\MVP.csv" />
-    <None Include="Volleyball\Rosters\Spike.csv" />
+    <ClCompile Include="Volleyball\Volleyball_class.cpp" />
+    <ClCompile Include="Volleyball\Volleyball_Section.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Basketball\Basketball.h" />
     <ClInclude Include="Menus.h" />
     <ClInclude Include="Tennis\Tennis.h" />
-    <ClInclude Include="Volleyball\Volleyball.h" />
+    <ClInclude Include="Volleyball\Volleyball_Class.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Basketball\Rosters\Team1.csv" />
+    <None Include="Basketball\Rosters\Team2.csv" />
+    <None Include="Basketball\Rosters\Team3.csv" />
+    <None Include="Basketball\Rosters\Team4.csv" />
+    <None Include="Basketball\Rosters\Team5.csv" />
+    <None Include="Basketball\Rosters\Team6.csv" />
+    <None Include="Basketball\Rosters\Team7.csv" />
+    <None Include="Basketball\Rosters\Team8.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Adversity.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Capitol.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\EPIC.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Lake Country.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\MVC.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\MVP.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Spike.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Sting.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

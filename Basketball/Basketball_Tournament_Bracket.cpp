@@ -5,33 +5,29 @@
 #include <vector>
 #include "Basketball.h"
 
-
-
-
-
-void bracket_generator(std::string Teams[8])
+void BBALL_bracket_generator(std::string BBALL_Participating_Teams[8])
 {
-	std::cout << Teams[0] << "          " << Teams[1] << std::endl;
+	std::cout << BBALL_Participating_Teams[0] << "          " << BBALL_Participating_Teams[1] << std::endl;
 	std::cout << "_____          _____" << std::endl;
 	std::cout << "_____|--------|_____" << std::endl;
-	std::cout << Teams[2] << "          " << Teams[3] << std::endl;
-	std::cout << Teams[4] << "          " << Teams[5] << std::endl;
+	std::cout << BBALL_Participating_Teams[2] << "          " << BBALL_Participating_Teams[3] << std::endl;
+	std::cout << BBALL_Participating_Teams[4] << "          " << BBALL_Participating_Teams[5] << std::endl;
 	std::cout << "_____          _____" << std::endl;
 	std::cout << "_____|--------|_____" << std::endl;
-	std::cout << Teams[6] << "          " << Teams[7] << std::endl;
+	std::cout << BBALL_Participating_Teams[6] << "          " << BBALL_Participating_Teams[7] << std::endl;
 }
 
 
 
 void Basketball_Tournament()
 {
-	std::string Participating_Teams[8];
+	std::string BBALL_Participating_Teams[8];
 	for (int i = 0; i < 8; i++)
 	{
-		std::string Team;
+		std::string BBALL_Team;
 		std::cout << "Please enter the " << i + 1 << " team entering the tournament(up to 8)" << std::endl;
-		std::getline(std::cin, Team);
-		Participating_Teams[i] = Team;
+		std::getline(std::cin, BBALL_Team);
+		BBALL_Participating_Teams[i] = BBALL_Team;
 	}
-	bracket_generator(Participating_Teams);
+	BBALL_bracket_generator(BBALL_Participating_Teams);
 }

@@ -19,13 +19,7 @@
     <Text Include="structure.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Volleyball\Visual_Volleyball.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Volleyball\Volleyball.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Volleyball\Record Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
@@ -37,17 +31,26 @@
     <ClCompile Include="Basketball\Basketball Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Volleyball\Volleyball_Section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Volleyball\Volleyball_class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Volleyball\Volleyball Bracket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Basketball\Basketball_Roster_Read.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Basketball\Basketball_Roster_Info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Basketball\Basketball_Tournament_Bracket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Volleyball\Rosters\MVC.csv" />
-    <None Include="Volleyball\Rosters\EPIC.csv" />
-    <None Include="Volleyball\Rosters\MVP.csv" />
-    <None Include="Volleyball\Rosters\Spike.csv" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Volleyball\Volleyball.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Menus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -57,5 +60,26 @@
     <ClInclude Include="Basketball\Basketball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Volleyball\Volleyball_Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Volleyball\Volleyball_Rosters\Adversity.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Capitol.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\EPIC.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Lake Country.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\MVC.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\MVP.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Spike.csv" />
+    <None Include="Volleyball\Volleyball_Rosters\Sting.csv" />
+    <None Include="Basketball\Rosters\Team1.csv" />
+    <None Include="Basketball\Rosters\Team2.csv" />
+    <None Include="Basketball\Rosters\Team3.csv" />
+    <None Include="Basketball\Rosters\Team4.csv" />
+    <None Include="Basketball\Rosters\Team5.csv" />
+    <None Include="Basketball\Rosters\Team6.csv" />
+    <None Include="Basketball\Rosters\Team7.csv" />
+    <None Include="Basketball\Rosters\Team8.csv" />
   </ItemGroup>
 </Project>
