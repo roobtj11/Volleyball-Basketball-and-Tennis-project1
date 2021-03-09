@@ -1,9 +1,7 @@
 #include "Volleyball_Class.h"
 #include <iostream>
 
-V_Players::V_Players(std::string Player_Name, int Player_Number, std::string Position, 
-	int Total_Kills, int Game_Kills, int Total_Hitting_Errors, int Game_Hitting_Errors, int Total_Assists, 
-	int Game_Assists, int Total_Serves, int Game_Serves, int Total_Missed_Serves, int Game_Missed_Serves){
+V_Players::V_Players(std::string Player_Name, int Player_Number, std::string Position, int Total_Kills, int Game_Kills, int Total_Hitting_Errors, int Game_Hitting_Errors, int Total_Assists, int Game_Assists, int Total_Serves, int Game_Serves, int Total_Missed_Serves, int Game_Missed_Serves){
 	this->Player_Name = Player_Name;
 	this->Player_Number = Player_Number;
 	this->Position = Position;

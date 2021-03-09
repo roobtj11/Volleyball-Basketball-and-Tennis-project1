@@ -349,6 +349,7 @@ void error_maker(std::string Loser, int Loser_num, std::string losing_lineup[]) 
 	if (error_str != losing_lineup[0] && error_str != losing_lineup[1] && error_str != losing_lineup[2] && error_str != losing_lineup[3] && error_str != losing_lineup[4] && error_str != losing_lineup[5]) {
 		std::cout << "That person is not on the court!" << std::endl;
 		error_maker(Loser, Loser_num, losing_lineup);
+	}
 	for (int p = 0; p < Teams[Loser_num].size(); p++) {
 		if (Teams[Loser_num][p].get_Player_Number() == error) {
 			Teams[Loser_num][p].add_Game_Hitting_Errors();

@@ -88,7 +88,7 @@ void Point_Play();
 
 void Team_Rotate(std::string lineup[]);
 
-void kill_or_error(std::string, int, std::string winning_lineup[], std::string, int, std::string losing_lineup[]) {
+void kill_or_error(std::string, int, std::string winning_lineup[], std::string, int, std::string losing_lineup[]);
 
 void killer(bool);
 
