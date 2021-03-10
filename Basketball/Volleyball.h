@@ -1,13 +1,8 @@
 #pragma once
 #include <string>
-#include <vector>
-#include <fstream>
-#include <sstream>
 
-int main();
-void Volleyball_Main();
 
-class V_Players{
+class V_Players {
 	std::string Player_Name;
 	int Player_Number;
 	std::string Position;
@@ -49,7 +44,7 @@ public:
 
 	int get_Total_Missed_Serves();
 	int get_Game_Missed_Serves();
-	
+
 	void add_Total_Kills();
 	void add_Game_Kills();
 	void add_Total_Hitting_Errors();
@@ -62,34 +57,3 @@ public:
 	void add_Total_Missed_Serves();
 	void add_Game_Missed_Serves();
 };
-
-
-void Get_Rosters(std::string);
-
-void bracket_generator(std::string Team_Names[]);
-
-void Volleyball_Tournament(std::string Team_Names[], int Num_Teams);
-
-void Get_Team_Names();
-
-void Store_Team_Info();
-
-void Start_Game();
-
-void get_teams();
-
-void get_serving();
-
-void get_lineups(int, std::string Home_Lineup[]);
-
-void Visual_Court();
-
-void Point_Play();
-
-void Team_Rotate(std::string lineup[]);
-
-void kill_or_error(std::string, int, std::string winning_lineup[], std::string, int, std::string losing_lineup[]);
-
-void killer(bool);
-
-void Point_Winner();

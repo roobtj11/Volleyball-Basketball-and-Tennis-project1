@@ -1,7 +1,8 @@
-#include "Volleyball_Class.h"
 #include <iostream>
+#include <string>
+#include "Volleyball.h"
 
-V_Players::V_Players(std::string Player_Name, int Player_Number, std::string Position, int Total_Kills, int Game_Kills, int Total_Hitting_Errors, int Game_Hitting_Errors, int Total_Assists, int Game_Assists, int Total_Serves, int Game_Serves, int Total_Missed_Serves, int Game_Missed_Serves){
+V_Players::V_Players(std::string Player_Name, int Player_Number, std::string Position, int Total_Kills, int Game_Kills, int Total_Hitting_Errors, int Game_Hitting_Errors, int Total_Assists, int Game_Assists, int Total_Serves, int Game_Serves, int Total_Missed_Serves, int Game_Missed_Serves) {
 	this->Player_Name = Player_Name;
 	this->Player_Number = Player_Number;
 	this->Position = Position;
@@ -17,29 +18,29 @@ V_Players::V_Players(std::string Player_Name, int Player_Number, std::string Pos
 	this->Game_Missed_Serves = Game_Missed_Serves;
 }
 void V_Players::print_basic() {
-	std::cout << Player_Name 
+	std::cout << Player_Name
 		<< "\t"
 		<< Player_Number
 		<< "\t"
 		<< Position
 		<< std::endl;
 }
-void V_Players::print_full () {
+void V_Players::print_full() {
 	std::cout << Player_Name
 		<< "\t"
 		<< Player_Number
 		<< "\t"
 		<< Position
-		<< "\n\nTotal Kills:\t" <<Total_Kills
-		<< "\nGame Kills:\t"  <<Game_Kills
-		<< "\nTotal Hitting Errors:\t" <<Total_Hitting_Errors
-		<< "\nGame Hitting Errors:\t"<<Game_Hitting_Errors
-		<< "\nTotal Assists:\t"<<Total_Assists
-		<< "\nGame Assists:\t"<<Game_Assists
-		<< "\nTotal Serves:\t"<<Total_Serves
-		<< "\nGame Serves:\t"<<Game_Serves
-		<< "\nTotal Missed Serves:\t" <<Total_Missed_Serves
-		<< "\nGame Missed Serves:\t"<<Game_Missed_Serves
+		<< "\n\nTotal Kills:\t" << Total_Kills
+		<< "\nGame Kills:\t" << Game_Kills
+		<< "\nTotal Hitting Errors:\t" << Total_Hitting_Errors
+		<< "\nGame Hitting Errors:\t" << Game_Hitting_Errors
+		<< "\nTotal Assists:\t" << Total_Assists
+		<< "\nGame Assists:\t" << Game_Assists
+		<< "\nTotal Serves:\t" << Total_Serves
+		<< "\nGame Serves:\t" << Game_Serves
+		<< "\nTotal Missed Serves:\t" << Total_Missed_Serves
+		<< "\nGame Missed Serves:\t" << Game_Missed_Serves
 		<< std::endl << std::endl << std::endl;
 }
 
