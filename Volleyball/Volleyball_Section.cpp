@@ -30,13 +30,13 @@ void Volleyball_Main() {
 	Start_Game();
 
 	std::cout << "\t\tHere is the Roster for " << Team_Names[home_num] << std::endl << std::endl;
-	for (int i = 0; i < Teams[home_num].size(); i++) {
+	for (unsigned int i = 0; i < Teams[home_num].size(); i++) {
 		Teams[home_num][i].print_full();
 	}
 	std::cout << std::endl << std::endl << std::endl;
 
 	std::cout << "\t\tHere is the Roster for " << Team_Names[away_num] << std::endl << std::endl;
-	for (int i = 0; i < Teams[away_num].size(); i++) {
+	for (unsigned int i = 0; i < Teams[away_num].size(); i++) {
 		Teams[away_num][i].print_full();
 	}
 }
@@ -164,7 +164,7 @@ void get_serving()
 
 void get_lineups(int team_num, std::string lineup[]) {
 	std::cout << "Here is the Roster for " << Team_Names[team_num] << std::endl;
-	for (int i = 0; i < Teams[team_num].size(); i++) {
+	for (unsigned int i = 0; i < Teams[team_num].size(); i++) {
 		Teams[team_num][i].print_basic();
 	}
 	for (int i = 0; i < Num_Side; i++) {
@@ -172,7 +172,7 @@ void get_lineups(int team_num, std::string lineup[]) {
 		std::string number_str;
 		std::getline(std::cin, number_str);
 		int number = std::stoi(number_str);
-		for (int p = 0; p < Teams[team_num].size(); p++) {
+		for (unsigned int p = 0; p < Teams[team_num].size(); p++) {
 			if (Teams[team_num][p].get_Player_Number() == number) {
 				if (number < 10) {
 					lineup[i] = "0" + number_str;
@@ -221,7 +221,7 @@ bool get_serve() {
 
 void serve_event(int team_num, std::string Team_Lineup[],bool serve) {
 	if (serve) {
-		for (int p = 0; p < Teams[team_num].size(); p++) {
+		for (unsigned int p = 0; p < Teams[team_num].size(); p++) {
 			int a = std::stoi(Team_Lineup[1]);
 			if (Teams[team_num][p].get_Player_Number() == a) {
 				Teams[team_num][p].add_Game_Serves();
@@ -232,7 +232,7 @@ void serve_event(int team_num, std::string Team_Lineup[],bool serve) {
 		Point_Winner();
 	}
 	else {
-		for (int p = 0; p < Teams[team_num].size(); p++) {
+		for (unsigned int p = 0; p < Teams[team_num].size(); p++) {
 			int a = std::stoi(Team_Lineup[1]);
 			if (Teams[team_num][p].get_Player_Number() == a) {
 				Teams[team_num][p].add_Game_Missed_Serves();
@@ -248,7 +248,7 @@ void serve_event(int team_num, std::string Team_Lineup[],bool serve) {
 		else if (serving == away) {
 			Team_Rotate(Home_Lineup);
 			away_score++;
-			serving == home;
+			serving = home;
 		}	
 	}
 }
@@ -313,7 +313,7 @@ void killer(std::string Winner, int Winner_Num, std::string winning_lineup[]) {
 		killer(Winner, Winner_Num, winning_lineup);
 	}
 	else {
-		for (int p = 0; p < Teams[Winner_Num].size(); p++) {
+		for (unsigned int p = 0; p < Teams[Winner_Num].size(); p++) {
 			if (Teams[Winner_Num][p].get_Player_Number() == kill) {
 				Teams[Winner_Num][p].add_Game_Kills();
 				Teams[Winner_Num][p].add_Total_Kills();
@@ -325,7 +325,7 @@ void killer(std::string Winner, int Winner_Num, std::string winning_lineup[]) {
 		killer(Winner, Winner_Num, winning_lineup);
 	}
 	else {
-		for (int p = 0; p < Teams[home_num].size(); p++) {
+		for (unsigned int p = 0; p < Teams[home_num].size(); p++) {
 			if (Teams[Winner_Num][p].get_Player_Number() == assist) {
 				Teams[Winner_Num][p].add_Game_Assists();
 				Teams[Winner_Num][p].add_Total_Assists();
@@ -350,7 +350,7 @@ void error_maker(std::string Loser, int Loser_num, std::string losing_lineup[]) 
 		std::cout << "That person is not on the court!" << std::endl;
 		error_maker(Loser, Loser_num, losing_lineup);
 	}
-	for (int p = 0; p < Teams[Loser_num].size(); p++) {
+	for (unsigned int p = 0; p < Teams[Loser_num].size(); p++) {
 		if (Teams[Loser_num][p].get_Player_Number() == error) {
 			Teams[Loser_num][p].add_Game_Hitting_Errors();
 			Teams[Loser_num][p].add_Total_Hitting_Errors();
