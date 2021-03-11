@@ -204,17 +204,11 @@ void Visual_Court() {
 bool get_serve() {
 	std::cout << "Was the Serve made? (Yes = 1, No = 0)" << std::endl;
 	std::string serve_str;
-	bool serve;
+	int serve_int;
+	bool serve = false;
 	std::getline(std::cin, serve_str);
-	try {
-		serve = std::stoi(serve_str);
-		if (serve != 1 || serve != 0) {
-			Point_Play();
-		}
-	}
-	catch (...) {
-		std::cout << "ERROR PLEASE ENTER AN ACCEPTED VALUE!" << std::endl;
-		Point_Play();
+	if (serve_int == 1 && 0 >= serve_int && serve_int <= 1) {
+		serve = true;
 	}
 	return serve;
 }
@@ -349,33 +343,33 @@ void error_maker(std::string Loser, int Loser_num, std::string losing_lineup[]) 
 	if (error_str != losing_lineup[0] && error_str != losing_lineup[1] && error_str != losing_lineup[2] && error_str != losing_lineup[3] && error_str != losing_lineup[4] && error_str != losing_lineup[5]) {
 		std::cout << "That person is not on the court!" << std::endl;
 		error_maker(Loser, Loser_num, losing_lineup);
-	for (int p = 0; p < Teams[Loser_num].size(); p++) {
-		if (Teams[Loser_num][p].get_Player_Number() == error) {
-			Teams[Loser_num][p].add_Game_Hitting_Errors();
-			Teams[Loser_num][p].add_Total_Hitting_Errors();
+		for (int p = 0; p < Teams[Loser_num].size(); p++) {
+			if (Teams[Loser_num][p].get_Player_Number() == error) {
+				Teams[Loser_num][p].add_Game_Hitting_Errors();
+				Teams[Loser_num][p].add_Total_Hitting_Errors();
+			}
 		}
 	}
 }
 
-	void kill_or_error(std::string Winner, int Winner_Num,std::string winning_lineup[], std::string Loser, int Loser_num, std::string losing_lineup[]){
-		std::cout << "Was the point won by a Kill or an Error? (Kill = 1, Error = 0)" << std::endl;
-		std::string KorE_str;
-		bool KorE;
-		try {
-			std::cin >> KorE;
-		}
-		catch (...) {
-			std::cout << "ERROR PLEASE ENTER AN ACCEPTED VALUE!" << std::endl;
-			kill_or_error(Winner, Winner_Num, winning_lineup, Loser, Loser_num, losing_lineup);
-		}
-		if (KorE) {
-			killer(Winner, Winner_Num, winning_lineup);
-		}
-		else {
-			error_maker(Loser, Loser_num, losing_lineup);
-		}
+void kill_or_error(std::string Winner, int Winner_Num, std::string winning_lineup[], std::string Loser, int Loser_num, std::string losing_lineup[]) {
+	std::cout << "Was the point won by a Kill or an Error? (Kill = 1, Error = 0)" << std::endl;
+	std::string KorE_str;
+	bool KorE;
+	try {
+		std::cin >> KorE;
+	}
+	catch (...) {
+		std::cout << "ERROR PLEASE ENTER AN ACCEPTED VALUE!" << std::endl;
+		std::exit(123);
+	}
+	if (KorE) {
+		killer(Winner, Winner_Num, winning_lineup);
+	}
+	else {
+		error_maker(Loser, Loser_num, losing_lineup);
+	}
 }
-
 void Point_Winner() {
 	std::cout << "Did the Serving team win the point? (Yes = 1, No = 0)";
 	bool winner;
